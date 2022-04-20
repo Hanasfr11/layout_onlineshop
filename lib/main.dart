@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // Application name
-      title: 'Flutter Hello World',
+      title: 'Aneka Resep Lezat',
       // Application theme data, you can set the colors for the application as
       // you want
       theme: ThemeData(
@@ -30,25 +30,18 @@ class MyHomePage extends StatelessWidget {
         appBar: AppBar(
           // The title text which will be shown on the action bar
           title: Text(title),
-        ),
-        body: ListView.builder(
-            itemCount: 20,
-            itemBuilder: (context, index) {
-              return Padding(
-                  padding: const EdgeInsets.only(
-                    top: 1,
-                  ),
-                  child: ListTile(
-                      leading: Image.network("https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"),
-                      title: const Text(
-                        "Black tiles",
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      subtitle: const Text(
-                        "Image for backround",
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      )));
+        body: ListView(
+          children: <Widget>[
+            ListTile(
+              leading: Image.network("https://asset.kompas.com/crops/aiWCRs50NjyXjlUHWKXXZOZ86js=/0x0:780x520/375x240/data/photo/2020/08/28/5f48cde774f4c.jpg
+              title: const Text(
+              'Brownies Kukus Coklatkus Coklat',
+              overflow: TextOverflow.ellipsis,
+            ),
+              subtitle: const Text('Resep brownies coklat enak dan mudah dibuat di rumah.'),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            )));
             }));
   }
 }
