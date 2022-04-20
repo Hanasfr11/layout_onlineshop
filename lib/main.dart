@@ -25,33 +25,54 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key key, this.title}) : super(key: key);
 
   @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           // The title text which will be shown on the action bar
           title: Text(title),
         ),
-    return Center(
-        body: ListView.builder(
-            itemCount: 20,
-            itemBuilder: (context, index) {
-              return Padding(
-                  padding: const EdgeInsets.only(
-                  ),
-                  child: ListView(
-                    children: <Widget>[
-                      ListTile(
-                      leading: Image.network(
-                        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F393713192426994178%2F&psig=AOvVaw2T6OmEmdPa7yhtXmiCf21H&ust=1650267093033000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPimtJLKmvcCFQAAAAAdAAAAABAD",)
-                        title: Text( "Japan,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-
-                      subtitle: Text( "Japan vibe",
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                        )];
-            }));
+        body: GridView.count(crossAxisCount: 2, children: <Widget>[
+          Container(
+            color: Colors.yellowAccent,
+            height: 500.0,
+            child: Center(
+              child: Text(
+                "1",
+                style: TextStyle(fontSize: 30.0),
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.blueAccent,
+            height: 500.0,
+            child: Center(
+              child: Text(
+                "2",
+                style: TextStyle(fontSize: 30.0),
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.green,
+            height: 500.0,
+            child: Center(
+              child: Text(
+                "3",
+                style: TextStyle(fontSize: 30.0),
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.red,
+            height: 500.0,
+            child: Center(
+              child: Text(
+                "4",
+                style: TextStyle(fontSize: 30.0),
+              ),
+            ),
+          ),
+        ]));
   }
 }
