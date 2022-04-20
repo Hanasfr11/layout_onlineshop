@@ -7,9 +7,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       // Application name
-      title: 'Aneka Resep Lezat',
+      title: 'Flutter Hello World',
       // Application theme data, you can set the colors for the application as
       // you want
       theme: ThemeData(
@@ -23,24 +22,32 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final String title;
-  const MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({Key? key, this.title}) : super(key: key);
 
   @override
-Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          // The title text which will be shown on the action bar
           title: Text(title),
         ),
-          body: ListView(
-            children: <Widget>[
-              ListTile(
-                leading: Image.network('https://asset.kompas.com/crops/aiWCRs50NjyXjlUHWKXXZOZ86js=/0x0:780x520/375x240/data/photo/2020/08/28/5f48cde774f4c.jpg'),
-                ),
-                title: const Text('Brownies Kukus Coklat'),
-                subtitle: const Text('Resep brownies coklat enak dan mudah dibuat di rumah.'),
-    ),
-          ]
-          ),
-          );
+        body: ListView.builder(
+            itemCount: 20,
+            itemBuilder: (context, index) {
+              return Padding(
+                  padding: const EdgeInsets.only(
+                    top: 20,
+                  ),
+                  child: ListTile(
+                      leading: Image.network(
+                        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F393713192426994178%2F&psig=AOvVaw2T6OmEmdPa7yhtXmiCf21H&ust=1650267093033000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPimtJLKmvcCFQAAAAAdAAAAABAD",)                      title: const Text( "Japan",
+
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      subtitle: const Text( "Japan vibe",
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        )));
+            }));
   }
 }
