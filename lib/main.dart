@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
       // Application theme data, you can set the colors for the application as
       // you want
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
       // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Alignment'),
+      home: MyHomePage(title: 'Choose a box'),
     );
   }
 }
@@ -25,7 +25,6 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key key, this.title}) : super(key: key);
 
   @override
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -34,31 +33,11 @@ class MyHomePage extends StatelessWidget {
         ),
         body: GridView.count(crossAxisCount: 2, children: <Widget>[
           Container(
-            color: Colors.yellowAccent,
+            color: Colors.orange,
             height: 500.0,
             child: Center(
               child: Text(
-                "1",
-                style: TextStyle(fontSize: 30.0),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.blueAccent,
-            height: 500.0,
-            child: Center(
-              child: Text(
-                "2",
-                style: TextStyle(fontSize: 30.0),
-              ),
-            ),
-          ),
-          Container(
-            color: Colors.green,
-            height: 500.0,
-            child: Center(
-              child: Text(
-                "3",
+                "green",
                 style: TextStyle(fontSize: 30.0),
               ),
             ),
@@ -68,7 +47,27 @@ class MyHomePage extends StatelessWidget {
             height: 500.0,
             child: Center(
               child: Text(
-                "4",
+                "purple",
+                style: TextStyle(fontSize: 30.0),
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.green,
+            height: 500.0,
+            child: Center(
+              child: Text(
+                "blue",
+                style: TextStyle(fontSize: 30.0),
+              ),
+            ),
+          ),
+          Container(
+            color: Colors.yellow,
+            height: 500.0,
+            child: Center(
+              child: Text(
+                "red",
                 style: TextStyle(fontSize: 30.0),
               ),
             ),
