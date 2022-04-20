@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
       ),
       // A widget which will be started on application startup
-      home: MyHomePage(title: 'Choose a box'),
+      home: MyHomePage(title: 'Choose the red box'),
     );
   }
 }
