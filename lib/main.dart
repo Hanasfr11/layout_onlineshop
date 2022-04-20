@@ -28,20 +28,17 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          // The title text which will be shown on the action bar
           title: Text(title),
-        body: ListView(
-          children: <Widget>[
-            ListTile(
-              leading: Image.network("https://asset.kompas.com/crops/aiWCRs50NjyXjlUHWKXXZOZ86js=/0x0:780x520/375x240/data/photo/2020/08/28/5f48cde774f4c.jpg
-              title: const Text(
-              'Brownies Kukus Coklatkus Coklat',
-              overflow: TextOverflow.ellipsis,
-            ),
-              subtitle: const Text('Resep brownies coklat enak dan mudah dibuat di rumah.'),
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-            )));
-            }));
-  }
-}
+        ),
+          body: ListView(
+            children: <Widget>[
+              ListTile(
+                leading: Image.network("https://asset.kompas.com/crops/aiWCRs50NjyXjlUHWKXXZOZ86js=/0x0:780x520/375x240/data/photo/2020/08/28/5f48cde774f4c.jpg
+                ),
+                title: const Text(
+                'Brownies KukusCoklat',
+                ),
+                subtitle: const Text('Resep brownies coklat enak dan mudah dibuat di rumah.'),
+    )]
+          ));
+    }}
