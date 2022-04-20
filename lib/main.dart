@@ -36,7 +36,7 @@ class MyHomePage extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                   padding: const EdgeInsets.only(
-                    top: 20,
+                    top: 1,
                   ),
                   child: ListTile(
                       leading: Image.network("https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"),
